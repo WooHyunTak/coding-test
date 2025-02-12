@@ -1,2 +1,0 @@
-# codeing-test
-codeing-test
