@@ -1,0 +1,18 @@
+# 점의 개수 입력
+N = int(input())
+
+# 좌표를 저장할 리스트
+points = []
+
+# N개의 좌표 입력 받기
+for _ in range(N):
+    x, y = map(int, input().split())
+    points.append((x, y))
+
+# 정렬하기
+# x좌표 오름차순, x좌표가 같으면 y좌표 오름차순
+points.sort(key=lambda x: (x[0], x[1]))
+
+# 결과 출력
+for x, y in points:
+    print(x, y)
