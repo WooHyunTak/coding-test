@@ -1,0 +1,14 @@
+from collections import deque
+
+N = int(input()) # 카드의 개수
+cards = deque(range(1, N + 1)) # 카드 덱
+# duque는 양방향 큐 자료구조 
+
+while len(cards) > 1:
+    # 제일 위의 카드를 버림
+    cards.popleft()
+    # 그 다음 제일 위의 카드를 제일 아래로 이동
+    if cards:
+        cards.append(cards.popleft())
+
+print(cards[0])
